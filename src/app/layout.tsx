@@ -19,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
     <body className={`${monheide.className} antialiased bg-[#F7F5F2]`}>
         {children}
+        
       </body>
     </html>
   );

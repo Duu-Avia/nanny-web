@@ -1,10 +1,14 @@
 const Header = () => {
     return (
-             <header className="bg-white text-[#3A2E25] px-6 py-4 flex justify-between items-center shadow">
-        <h1 className="text-xl font-bold ">Mom - Nanny Center Mongolia</h1>
-        <nav className="space-x-4 text-sm">
-          <a href="#" className="hover:underline">Бидний тухай</a>
-          <a href="#" className="hover:underline">Холбоо барих</a>
+      <header className="flex justify-between items-center px-6 py-4">
+        <h1 className="text-2xl font-bold text-[#1e1e2f]">Mom - Nanny Center Mongolia</h1>
+        <nav className="space-x-4 text-sm text-gray-600">
+          <a href="#" className="hover:text-black">Home</a>
+          <a href="#" className="hover:text-black">About</a>
+          <a href="#" className="hover:text-black">Shop</a>
+          <a href="#" className="hover:text-black">Blog</a>
+          <a href="#" className="hover:text-black">Category</a>
+          <a href="#" className="hover:text-black">Contact</a>
         </nav>
       </header>
     )

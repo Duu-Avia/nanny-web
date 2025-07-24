@@ -21,7 +21,7 @@ const Hero = () => {
 ИТГЭЛТЭЙ ХАЛАМЖ
         </p>
         <button className="mt-8 px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-full text-lg transition">
-          Get Started
+          Асрагч хайж байгаа бол
         </button>
       </div>
     </section>

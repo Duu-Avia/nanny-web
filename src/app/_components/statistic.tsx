@@ -7,7 +7,7 @@ const staff = [
 
 const Statistic = () => {
   return (
-<section className="bg-white py-20 px-6 text-center">
+<section className="bg-white py-20 px-6 text-center pt-30">
   <h2 className="text-3xl md:text-4xl font-serif text-[#0f172a] mb-16">
     International Nanny Placement Agency
   </h2>

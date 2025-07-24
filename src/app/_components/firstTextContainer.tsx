@@ -1,7 +1,7 @@
 const FirstTextContainer = () => {
     return (
         <>
-         <section className=" bg-[#f6f9fc] py-20  text-[#1e293b]">
+         <section className=" bg-[#f6f9fc] py-20  text-[#1e293b] pt-30">
   <div className="px-5 mx-auto text-center">
     <h2 className="text-3xl md:text-4xl font mb-10">
       International Childcare Recruitment Agency

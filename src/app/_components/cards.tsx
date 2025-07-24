@@ -1,10 +1,10 @@
 const Cards = () => {
     return  (
         <>
-        <section className="bg-[#f6f9fc] py-20 px-6" id="team">
+        <section className="pt-30 bg-[#f6f9fc] py-20 px-6" id="team">
   <div className=" mx-auto text-center">
-    <h2 className="text-3xl md:text-4xl font-semibold text-[#0f172a] mb-12">
-      Our Recruiters are pleased to assist you to find the right nanny for your family
+    <h2 className="text-3xl md:text-4xl text-[#001731] mb-12 max-w-7xl mx-auto px-4">
+     Манай хамт олон нь танай гэр бүлд тохирох асрагч олоход тань туслахдаа таатай байна
     </h2>
     <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
       {[

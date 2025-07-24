@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={`${monheide.className} antialiased bg-[#F7F5F2]`}>
+    <body className={` antialiased bg-[#F7F5F2]`}>
         {children}
         
       </body>

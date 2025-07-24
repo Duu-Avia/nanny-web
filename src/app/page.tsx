@@ -1,37 +1,61 @@
+// src/app/page.tsx
+
 'use client';
 
-import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import Header from './_components/header';
 import Hero from './_components/hero';
+import FirstTextContainer from './_components/firstTextContainer';
+import SecondMp4 from './_components/secondMp4';
+import Statistic from './_components/statistic';
 import Cards from './_components/cards';
-import Mp4Section from './_components/mp4Section';
-import InfoWithIcons from './_components/infoWithIcons';
-import AboutUs from './_components/aboutUs';
-import InstagramSection from './_components/instagramSection';
 import Footer from './_components/footer';
 
 export default function Home() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 30);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <main className="relative min-h-screen bg-[#f7f2fc] via-[#fdf6f8] to-[#f1faff] text-gray-800">
-<div className="relative min-h-screen  overflow-hidden">
-   <div className="absolute top-[10px] left-[-100px] w-[600px] h-[600px] bg-pink-300 opacity-40 rounded-full filter blur-3xl z-0"></div>
-  <div className="absolute top-1/3 left-[-100px] w-[600px] h-[600px] bg-pink-300 opacity-40 rounded-full filter blur-3xl z-0"></div>  
-  <div className="absolute  right-[-150px] w-[500px] h-[500px] bg-blue-300 opacity-40 rounded-full filter blur-3xl z-0"></div>
-  <div className="absolute top-1/4 right-[50px] w-[400px] h-[400px] bg-blue-300 opacity-40 rounded-full filter blur-3xl z-0"></div>  
-  <div className="absolute  right-[-150px] w-[500px] h-[500px] bg-blue-300 opacity-40 rounded-full filter blur-3xl z-0"></div>
-    <div className="absolute bottom-1/4 right-[-20px] w-[400px] h-[400px] bg-blue-300 opacity-40 rounded-full filter blur-3xl z-0"></div>  
-  <div className="absolute  bottom-[50px] left-[100px] w-[650px] h-[650px] bg-pink-300 opacity-40 rounded-full filter blur-3xl z-0"></div>
-  <div className="relative">
-      <Header/>
+    <main className="bg-white text-gray-900">
+      {/* Header */}
+      <Header />
+
+      {/* Hero Section */}
       <Hero/>
-      <Cards/>
-      <InfoWithIcons/>
-      <Mp4Section/>
-      <AboutUs/>
-      <InstagramSection/>
-      <Footer/>
-  </div>
-</div>
+  <FirstTextContainer/>
+  <SecondMp4/>
+
+
+       {/* tootoi heseg */}
+  <Statistic/>
+
+
+      {/* Mp4 Section */}
+      <section className="w-full bg-white py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-8">Happy Families & Nannies</h2>
+          <video
+            className="w-full rounded-lg shadow-lg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            src="/compressedMomNanny.mp4"
+          />
+        </div>
+      </section>
+
+      {/* About Us / Team */}
+    <Cards/>
+
+      {/* Footer */}
+    <Footer/>
     </main>
+    
   );
 }

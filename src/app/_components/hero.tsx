@@ -1,21 +1,30 @@
-import Image from "next/image";
-
+// src/app/_components/hero.tsx
 const Hero = () => {
   return (
-         <section className="px-6 py-10 text-center md:text-left md:flex md:items-center md:justify-between max-w-6xl mx-auto">
-           <div className="md:w-1/2 space-y-6">
-             <h2 className="text-4xl font-bold leading-snug text-[#1e1e2f]">
-              TRUSTED CARE HAPPY FAMILY ИТГЭЛТЭЙ ХАЛАМЖ <br /> АЗЖАРГАЛТАЙ ГЭР БҮЛ
-             </h2>
-             <p className="text-gray-600 max-w-md">
-               There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-             </p>
-             <button className="bg-teal-500 text-white px-6 py-2 rounded hover:bg-teal-600">Get it Now!</button>
-           </div>
-           <div className="md:w-1/2 mt-10 md:mt-0">
-             <Image src="/withoutBackground.png" alt="Hero" width={400} height={400} className="mx-auto" />
-           </div>
-         </section>
+    <section className="relative h-[90vh] overflow-hidden">
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+        src="/hero-video.mp4"
+      />
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-6">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+       
+АЗЖАРГАЛТАЙ ГЭР БҮЛ
+        </h1>
+        <p className="mt-6 text-lg md:text-xl max-w-xl">
+         TRUSTED CARE HAPPY FAMILY
+ИТГЭЛТЭЙ ХАЛАМЖ
+        </p>
+        <button className="mt-8 px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-full text-lg transition">
+          Get Started
+        </button>
+      </div>
+    </section>
   );
 };
 
